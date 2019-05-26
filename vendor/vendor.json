@@ -3,16 +3,16 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "hWEdEnxN8gT4YK5XcrXm0+J4lMg=",
+			"checksumSHA1": "Y71ZbHytnqYt2AWrIkjCR8lBwL0=",
 			"path": "github.com/waymobetta/goslack",
-			"revision": "147f3e088c36db619f2490fad9d7e0de380ede15",
-			"revisionTime": "2019-05-26T05:32:59Z"
+			"revision": "be9be2cf201e55ff55279a6e5d6c25f3b4cebe71",
+			"revisionTime": "2019-05-26T05:47:05Z"
 		},
 		{
 			"checksumSHA1": "3aD1ADlukusnXqAorfYJqEmdn7k=",
 			"path": "github.com/waymobetta/goslack/example",
-			"revision": "147f3e088c36db619f2490fad9d7e0de380ede15",
-			"revisionTime": "2019-05-26T05:32:59Z"
+			"revision": "be9be2cf201e55ff55279a6e5d6c25f3b4cebe71",
+			"revisionTime": "2019-05-26T05:47:05Z"
 		}
 	],
 	"rootPath": "github.com/waymobetta/goslack"
