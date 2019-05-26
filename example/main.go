@@ -30,7 +30,7 @@ func main() {
 
 	err := gs.SendString(
 		msg,
-		os.Getenv("SLACK_CHANNEL_NAME"),
+		os.Getenv("SLACK_CHANNEL_NAME"), // XXXXXXXXX
 	)
 	if err != nil {
 		log.Fatal(err)
