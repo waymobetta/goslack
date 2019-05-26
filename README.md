@@ -19,6 +19,12 @@ _Create new bot user and obtain API key_
 https://{team}.slack.com/apps/manage/custom-integrations
 ```
 
+### set environment variables
+```bash
+export SLACK_API_KEY='xoxp-XXXXXXXXXX-XXXXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+export SLACK_CHANNEL_NAME='@self'
+```
+
 ### usage
 
 _Build CLI based on example_
