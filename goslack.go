@@ -12,7 +12,6 @@ import (
 type Config struct {
 	APIToken    string
 	ChannelName string
-	Domain      string
 	Bot         *Bot
 }
 
@@ -56,7 +55,7 @@ func (g *GoSlack) SendString(msg string) error {
 	// generate POST request
 	req, err := http.NewRequest(
 		"POST",
-		g.Config.Domain,
+		"https://slack.com/api/chat.postMessage",
 		strings.NewReader(payload.Encode()),
 	)
 
