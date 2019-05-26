@@ -20,8 +20,7 @@ func main() {
 
 	gs := goslack.NewGoSlack(
 		&goslack.Config{
-			APIToken:    os.Getenv("SLACK_API_KEY"),
-			ChannelName: os.Getenv("SLACK_CHANNEL_NAME"),
+			Token: os.Getenv("SLACK_API_KEY"),
 			Bot: &goslack.Bot{
 				Name:  "gopher_bot",
 				Emoji: ":golang:",
@@ -31,6 +30,7 @@ func main() {
 
 	err := gs.SendString(
 		msg,
+		os.Getenv("SLACK_CHANNEL_NAME"),
 	)
 	if err != nil {
 		log.Fatal(err)
