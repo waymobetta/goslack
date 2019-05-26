@@ -37,8 +37,13 @@ func NewGoSlack(config *Config) *GoSlack {
 	}
 }
 
+// SendString is a method to send a message to a
+// Slack channel specified in the Config object
+// @dev sends message (string) to channel specified in config
+// @param msg is a message to be sent
+// @return error
 func (g *GoSlack) SendString(msg string) error {
-	// initialize new Values type in variable payload
+	// initialize new Values map in payload variable
 	payload := url.Values{}
 
 	// set form values
