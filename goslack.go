@@ -10,9 +10,8 @@ import (
 
 // Config struct holds config info
 type Config struct {
-	APIToken    string
-	ChannelName string
-	Bot         *Bot
+	Token string
+	Bot   *Bot
 }
 
 // GoSlack struct holds pointer to config info
@@ -39,15 +38,16 @@ func NewGoSlack(config *Config) *GoSlack {
 // SendString is a method to send a message to a
 // Slack channel specified in the Config object
 // @dev sends message (string) to channel specified in config
-// @param msg is a message to be sent
+// @param msg is a message (string) to be sent
+// @param chnl is the channel name (string) to deliver the message to
 // @return error
-func (g *GoSlack) SendString(msg string) error {
+func (g *GoSlack) SendString(msg, chnl string) error {
 	// initialize new Values map in payload variable
 	payload := url.Values{}
 
 	// set form values
-	payload.Add("token", g.Config.APIToken)
-	payload.Add("channel", g.Config.ChannelName)
+	payload.Add("token", g.Config.Token)
+	payload.Add("channel", chnl)
 	payload.Add("text", msg)
 	payload.Add("username", g.Config.Bot.Name)
 	payload.Add("icon_emoji", g.Config.Bot.Emoji)
