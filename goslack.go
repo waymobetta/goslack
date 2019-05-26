@@ -79,7 +79,7 @@ func (g *GoSlack) SendString(msg string) error {
 		),
 	)
 
-	// execute GET
+	// execute POST
 	res, err := client.Do(req)
 	if err != nil {
 		return err
