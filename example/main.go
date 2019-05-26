@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	goslack "github.com/waymobetta/goslack"
+	"github.com/waymobetta/goslack"
 )
 
 func main() {
