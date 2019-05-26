@@ -25,9 +25,10 @@ type Bot struct {
 	Emoji string
 }
 
-// NewGoSlack is a method to configure a new GoSlack object
+// NewGoSlack
+// @notice NewGoSlack is a method to configure a new GoSlack object
 // @dev creates new GoSlack object
-// @param Config object as config
+// @param config is a pointer to Config object
 // @return pointer to GoSlack struct
 func NewGoSlack(config *Config) *GoSlack {
 	return &GoSlack{
