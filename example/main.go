@@ -22,7 +22,6 @@ func main() {
 		&goslack.Config{
 			APIToken:    os.Getenv("SLACK_API_KEY"),
 			ChannelName: os.Getenv("SLACK_CHANNEL_NAME"),
-			Domain:      os.Getenv("SLACK_DOMAIN_NAME"),
 			Bot: &goslack.Bot{
 				Name:  "gopher_bot",
 				Emoji: ":golang:",
