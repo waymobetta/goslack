@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "eZgXMJdLsg/1S8C++VUvndbzvL0=",
+			"path": "github.com/waymobetta/goslack",
+			"revision": "e048b5a7059263e555322b88bc9721e6f72e31c4",
+			"revisionTime": "2018-08-16T04:53:20Z"
+		},
+		{
+			"checksumSHA1": "qT9HueWnk4dOk05dI9Nq7v79m9A=",
+			"path": "github.com/waymobetta/goslack/example",
+			"revision": "e048b5a7059263e555322b88bc9721e6f72e31c4",
+			"revisionTime": "2018-08-16T04:53:20Z"
+		}
+	],
+	"rootPath": "github.com/waymobetta/goslack"
+}

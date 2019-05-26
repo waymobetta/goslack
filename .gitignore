@@ -1,0 +1,10 @@
+.DS_Store
+.env
+goslack
+
+bin/
+build/
+.git/
+
+# Do NOT ignore vendor
+# vendor/
