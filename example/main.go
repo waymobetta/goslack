@@ -17,6 +17,7 @@ func main() {
 	}
 
 	msg := os.Args[1]
+	chnl := os.Args[2]
 
 	gs := goslack.NewGoSlack(
 		&goslack.Config{
@@ -30,7 +31,7 @@ func main() {
 
 	err := gs.SendString(
 		msg,
-		os.Getenv("SLACK_CHANNEL_NAME"), // XXXXXXXXX
+		chnl, // XXXXXXXXX
 	)
 	if err != nil {
 		log.Fatal(err)
