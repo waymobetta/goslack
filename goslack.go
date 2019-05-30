@@ -38,7 +38,7 @@ func NewGoSlack(config *Config) *GoSlack {
 
 // SendString
 // @notice is a method to send a message to a Slack channel
-// @dev sends message (string) to channel specified in config
+// @dev sends message (string) to channel specified in parameters
 // @param msg is a message (string) to be sent
 // @param chnl is the channel name (string) to deliver the message to
 // @return error
