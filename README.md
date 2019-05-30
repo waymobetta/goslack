@@ -22,7 +22,6 @@ https://{team}.slack.com/apps/manage/custom-integrations
 ### set environment variables
 ```bash
 export SLACK_API_KEY='xoxp-XXXXXXXXXX-XXXXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-export SLACK_CHANNEL_NAME='@self'
 ```
 
 ### usage
@@ -30,17 +29,17 @@ export SLACK_CHANNEL_NAME='@self'
 _Build CLI based on example_
 ```bash
 $ go build -o $GOPATH/bin/goslack example/main.go
-$ goslack <message>
+$ goslack <message> <channel>
 ```
 ### examples
 _Notify me when nmap scan completes_
 ```bash
-$ nmap -sC -sV XX.XX.XX.XX-XX > scsv.nmap; goslack 'nmap scan complete'
+$ nmap -sC -sV XX.XX.XX.XX-XX > scsv.nmap; goslack 'nmap scan complete' @jon
 ```
 
 _Basic sleep example (\*nix)_
 ```bash
-sleep 3; goslack finished
+sleep 3; goslack finished @jon
 ```
 
 MIT
