@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 2 {
+	if len(os.Args) < 3 {
 		fmt.Println(
-			"usage: goslack <message>\n\nexample: goslack \"hello world\"",
+			"usage: goslack <message> <channel_name>\n\nexample: goslack 'hello world' @jon",
 		)
 		return
 	}
