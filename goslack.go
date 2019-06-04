@@ -1,13 +1,12 @@
 package goslack
 
 import (
+	"fmt"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
 	"time"
-
-	log "github.com/sirupsen/logrus"
 )
 
 // Config struct holds config info
@@ -62,7 +61,7 @@ func (g *GoSlack) SendString(msg, chnl string) error {
 		strings.NewReader(payload.Encode()),
 	)
 	if err != nil {
-		err = log.Errorf("[goslack] could not prepare request: %v\n", err)
+		err = fmt.Errorf("[goslack] could not prepare request: %v\n", err)
 		return err
 	}
 
@@ -92,7 +91,7 @@ func (g *GoSlack) SendString(msg, chnl string) error {
 	// execute POST request
 	res, err := client.Do(req)
 	if err != nil {
-		err = log.Errorf("[goslack] could not execute request: %v\n", err)
+		err = fmt.Errorf("[goslack] could not execute request: %v\n", err)
 		return err
 	}
 
