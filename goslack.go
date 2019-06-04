@@ -6,6 +6,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"google.golang.org/appengine/log"
 )
 
 // Config struct holds config info
@@ -59,18 +61,25 @@ func (g *GoSlack) SendString(msg, chnl string) error {
 		"https://slack.com/api/chat.postMessage",
 		strings.NewReader(payload.Encode()),
 	)
+	if err != nil {
+		err = log.Errorf("[goslack] could not prepare request: %v\n", err)
+		return err
+	}
 
 	// init new client with custom timeout
 	client := &http.Client{
-		Timeout: 5 * time.Second,
+		Timeout: time.Duration(
+			time.Second * 10,
+		),
 	}
 
-	// set headers
+	// set URL encoded form header
 	req.Header.Add(
 		"Content-Type",
 		"application/x-www-form-urlencoded",
 	)
 
+	// set content-length header
 	req.Header.Add(
 		"Content-Length",
 		strconv.Itoa(
@@ -80,9 +89,10 @@ func (g *GoSlack) SendString(msg, chnl string) error {
 		),
 	)
 
-	// execute POST
+	// execute POST request
 	res, err := client.Do(req)
 	if err != nil {
+		err = log.Errorf("[goslack] could not execute request: %v\n", err)
 		return err
 	}
 
