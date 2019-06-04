@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"google.golang.org/appengine/log"
+	log "github.com/sirupsen/logrus"
 )
 
 // Config struct holds config info
